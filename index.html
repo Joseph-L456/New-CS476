@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+
+
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script type="text/javascript" src="Login.js"> </script>
+
+  <script type="text/javascript" src="Sign.js"> </script>
+
+
+  <title>Sign-up + Login</title>
+</head>
+
+<body>
+
+  <div class="box">
+
+    <div class="pre-box">
+      <h1>WELCOME</h1>
+      <p>Digital Art Gallery</p>
+      <div class="img-box">
+        <img src="./img/waoku.jpg" alt="">
+      </div>
+    </div>
+
+
+
+    <div class="register-form">
+
+      <div class="title-box">
+        <h1>Sign-up</h1>
+      </div>
+
+      <form id="Sign" method="post" name="signup" action="signup.php">
+
+        <div class="input-box">
+
+
+          <label id="msg_uname1" class="err_msg1"></label>
+
+          <input type="text" name="uname1" size="30" placeholder="username">
+
+          
+
+          <label id="msg_pname1" class="err_msg1"></label>
+
+          <input type="text" name="pname1" placeholder="profilename"> 
+
+          
+          <label id="msg_pswd1" class="err_msg1"></label>
+
+          <input type="password" name="pswd1" placeholder="password">
+
+
+
+
+
+          <label id="msg_pswdr1" class="err_msg1"></label>
+
+          <input type="password" name="pswdr1" placeholder="confirm password">
+        </div>
+
+        <div class="btn-box">
+
+          <input type="submit" value="SignUp" class="submit">
+      </form>
+      <span id="display_info"></span>
+
+
+      <p onclick="mySwitch()">click me to login!</p>
+    </div>
+  </div>
+
+
+
+
+  <div class="login-form">
+
+    <div class="title-box">
+      <h1>Login</h1>
+    </div>
+
+    <form id="Login" method="post" name="login" action="login.php">
+      <div class="input-box">
+
+
+        <label id="msg_uname" class="err_msg"></label>
+
+        <input type="text" name="uname" placeholder="username">
+
+
+
+        <label id="msg_pswd" class="err_msg"></label></p>
+
+        <input type="password" placeholder="password" name="pswd">
+
+        <p><span id="display_info"></p>
+
+
+      </div>
+
+      <div class="btn-box">
+
+        <input type="submit" value="Login" class="submit">
+    </form> 
+
+
+    <p onclick="mySwitch()">No account? Go Sign-up</p>
+  </div>
+  </div>
+
+  </div>
+
+  <script>
+
+    let flag = true
+    const mySwitch = () => {
+      if (flag) {
+
+        $(".pre-box").css("transform", "translateX(100%)")
+
+        $(".pre-box").css("background-color", "#e7fbe4")
+
+        $("img").attr("src", "./img/wuwu.jpeg")
+
+      }
+      else {
+        $(".pre-box").css("transform", "translateX(0%)")
+        $(".pre-box").css("background-color", "#d0ebf0")
+        $("img").attr("src", "./img/waoku.jpg")
+      }
+      flag = !flag
+    }
+  </script>
+  <script>
+    const bubleCreate = () => {
+
+      const body = document.body
+
+      const buble = document.createElement('span')
+
+      let r = Math.random() * 5 + 25 
+
+      buble.style.width = r + 'px'
+      buble.style.height = r + 'px'
+
+      buble.style.left = Math.random() * innerWidth + 'px'
+
+      body.append(buble)
+
+      setTimeout(() => {
+        buble.remove()
+      }, 4000)
+    }
+
+    setInterval(() => {
+      bubleCreate()
+    }, 200);
+  </script>
+
+  <script type="text/javascript" src="Login-r.js"></script>
+  <script type="text/javascript" src="signup-r.js"></script>
+
+
+
+
+
+</body>
+
+</html>

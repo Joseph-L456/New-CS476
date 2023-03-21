@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+	<html class="no-js"> 
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Upload Artwork</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <link rel="shortcut icon" href="favicon.ico">
+    
+
+    <link rel="stylesheet" href="bootstrap.css">
+
+    <link rel="stylesheet" href="style1.css">
+
+    <script src="https://kit.fontawesome.com/1d7b5c0471.js" crossorigin="anonymous"></script>
+
+    </head>
+    
+    <body>
+    <div id="fh5co-page">
+        <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+        <aside id="fh5co-aside" role="complementary" class="border js-fullheight">
+
+            <h3 id="fh5co-logo"><i class="far fa-user-circle"></i>  {profileName}</h3>
+            <nav id="fh5co-main-menu" role="navigation">
+                <ul>
+                    <li class="fh5co-active"><a href="main.php?$userid={userID}">Gallery</a></li>
+                    <li><a href="forum.php?$userid={userID}">Forum</a></li>
+                    <li><a href="profile.php?$userid={userID}">Profile</a></li>
+                </ul>
+            </nav>
+
+            <div class="fh5co-footer">
+                <p>Copyright &copy; 2023.Team Mahou Shojo All rights reserved.</p>
+                
+            </div>
+
+        </aside>
+
+
+        <div id="fh5co-main">
+            
+            <div class="fh5co-narrow-content animate-box" data-animate-effect="fadeInLeft">
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2>Upload Artwork</h2>
+                    </div>
+                </div>
+                <form id="uploadart" method="post" name="uploadart" action="uploadartwork.php">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="ulawname" class="form-control" placeholder="Artwork Name">
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <input type="file" name="ulawimage" class="form-control" >
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <input type="text" name="ulawdescription" class="form-control" placeholder="Artwork description">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="submit" class="btn btn-primary btn-md" value="Submit">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+            <div id="map"></div>
+        </div>
+    </div>
+
+
+    <script src="script1.js"></script>
+
+</body>
+
+</html>
